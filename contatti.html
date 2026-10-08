@@ -59,21 +59,81 @@
 
         <section class="contact-page">
 
-            <div class="contact-intro">
+           <div class="contact-intro">
 
-                <p class="eyebrow">Contatti</p>
+    <p class="eyebrow">Contatti</p>
 
-                <h1>Parliamone.</h1>
+    <h1>Parliamone.</h1>
 
-                <p class="contact-description">
-                    Se vuoi conoscermi meglio, parlare di un progetto
-                    o semplicemente entrare in contatto.
-                </p>
+    <p class="contact-description">
+        Se vuoi conoscermi meglio, parlare di un progetto
+        o semplicemente entrare in contatto.
+    </p>
 
-            </div>
+
+
+    <!-- CONTACT FORM -->
+
+    <form class="contact-form" id="contact-form">
+
+        <div class="form-field">
+            <label for="name">Nome</label>
+
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Il tuo nome"
+                required
+            >
+        </div>
+
+
+        <div class="form-field">
+            <label for="email">Email</label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="nome@email.com"
+                required
+            >
+        </div>
+
+
+        <div class="form-field">
+            <label for="message">Messaggio</label>
+
+            <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Scrivi qui il tuo messaggio..."
+                required
+            ></textarea>
+        </div>
+
+
+       <button type="submit" class="button button-secondary form-submit">
+    Invia messaggio
+</button>
+<p class="form-status" id="form-status"></p>
+
+    </form>
+
+</div>
 
 
             <div class="contact-details">
+
+                <div class="contact-details-intro">
+    <p class="contact-column-label">
+        <strong>Preferisci un contatto diretto?</strong>
+    </p>
+
+
+</div>
 
                 <div class="contact-item">
                     <p class="contact-label">Email</p>
@@ -109,7 +169,7 @@
 
                 <div class="contact-item">
                     <p class="contact-label"> GitHub </p>
-                    <a href="https://github.com/alessandrotamanti/Alessandro-Tamanti_Portfolio"
+                    <a href="https://github.com/alessandrotamanti/Portfolio"
                         target="_blank"
                         rel="noopener noreferrer">
 
@@ -139,7 +199,7 @@
         <div class="footer-content">
 
             <p class="footer-copyright">
-            2026 Alessandro Tamanti
+            Alessandro Tamanti
             </p>
 
             <div class="footer-links">
@@ -153,7 +213,7 @@
                     LinkedIn
                 </a>
 
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/alessandrotamanti/Portfolio" target="_blank" rel="noopener noreferrer">
                     GitHub
                 </a>
 
@@ -167,6 +227,45 @@
         </div>
 
     </footer>
+
+    <script
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script>
+    emailjs.init({
+        publicKey: "xqTcr2OzNtfd60bN6"
+    });
+</script>
+<script>
+    const form = document.getElementById("contact-form");
+    const status = document.getElementById("form-status");
+ 
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        status.textContent = "Invio in corso...";
+        status.className = "form-status";
+
+        emailjs.sendForm(
+            "service_pn1yskn",
+            "template_2b7hpdu",
+            form
+        )
+        .then(function() {
+             status.textContent = "Messaggio inviato correttamente.";
+            status.className = "form-status form-status--success";
+
+            form.reset();
+
+        })
+        .catch(function(error) {
+             status.textContent = "Errore durante l'invio. Riprova.";
+            status.className = "form-status form-status--error";
+
+            console.error(error);
+        });
+    });
+</script>
 
 </body>
 </html>
