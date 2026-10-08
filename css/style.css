@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 /* =========================
    VARIABILI
@@ -23,6 +24,26 @@ header {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(26, 26, 26, 0.06);
+}
+
+.nav-links a {
+  position: relative;
+}
+
+.nav-links a.active {
+  color: #2F5BFF;
+  font-weight: 600;
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: #2F5BFF;
+  border-radius: 999px;
 }
 
 body {
@@ -263,38 +284,63 @@ nav .container {
   nav .container {
     min-height: 64px;
     position: relative;
+    z-index: 1001;
   }
   .logo {
     font-size: 0.95rem;
+    position: relative;
+    z-index: 1002;
   }
   .menu-toggle {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    z-index: 1002;
     font-size: 1.75rem;
     line-height: 1;
     cursor: pointer;
   }
   .nav-links {
-    display: none;
-    position: absolute;
-    top: 64px;
-    left: 0;
+    position: fixed;
+    inset: 0;
     width: 100%;
+    height: 100vh;
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
-    padding: 16px 0 24px;
-    background-color: #F8F8F6;
+    justify-content: center;
+    gap: 12px;
+    padding: 96px 32px 48px;
+    background: radial-gradient(circle at 85% 15%, rgba(47, 91, 255, 0.14), transparent 32%), radial-gradient(circle at 10% 85%, rgba(184, 199, 255, 0.18), transparent 36%), #F8F8F6;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-12px);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
   }
   .nav-links a {
     width: 100%;
     padding: 12px 0;
-    font-size: 1.125rem;
-    font-weight: 500;
+    color: #1A1A1A;
+    font-size: clamp(2rem, 9vw, 3rem);
+    font-weight: 600;
+    line-height: 1.2;
+    font-size: clamp(1.5rem, 5vw, 1.9rem);
+    gap: 18px;
+    letter-spacing: -0.03em;
+  }
+  .nav-links a.active {
+    color: #2F5BFF;
+  }
+  .nav-links a.active::after {
+    display: none;
   }
   .menu-checkbox:checked ~ .nav-links {
-    display: flex;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
   }
   .menu-checkbox:checked + .menu-toggle .menu-open {
     display: none;
@@ -674,16 +720,15 @@ nav .container {
   margin-top: 8px;
 }
 
-.text-link {
-  font-weight: 600;
-  border-bottom: 1px solid #1A1A1A;
-  padding-bottom: 2px;
-  transition: color 0.2s ease, border-color 0.2s ease;
+.button-secondary::after {
+  content: "↓";
+  margin-left: 8px;
+  font-size: 1rem;
+  transition: transform 0.2s ease;
 }
 
-.text-link:hover {
-  color: #2F5BFF;
-  border-color: #2F5BFF;
+.button-secondary:hover::after {
+  transform: translateY(2px);
 }
 
 .about-skills {
@@ -1078,13 +1123,24 @@ nav .container {
   background: radial-gradient(circle at 15% 30%, rgba(120, 170, 255, 0.28) 0%, transparent 32%), radial-gradient(circle at 82% 55%, rgba(180, 160, 255, 0.2) 0%, transparent 34%), radial-gradient(circle at 50% 100%, rgba(150, 210, 255, 0.18) 0%, transparent 38%);
 }
 
-.contact-cta-content {
-  width: min(100% - 40px, 1200px);
-  margin-inline: auto;
+.contact-cta-actions {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  text-align: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.button-secondary {
+  background: transparent;
+  color: #1A1A1A;
+  border: 1px solid rgba(26, 26, 26, 0.25);
+}
+
+.button-secondary:hover {
+  background: rgba(26, 26, 26, 0.05);
+  color: #1A1A1A;
+  border-color: rgba(26, 26, 26, 0.4);
 }
 
 /* =========================
@@ -1107,6 +1163,16 @@ nav .container {
   }
   .contact-item a {
     font-size: 1.4rem;
+  }
+}
+@media (max-width: 767px) and (max-width: 767px) {
+  .contact-cta-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .contact-cta-actions .button {
+    width: 100%;
+    text-align: center;
   }
 }
 /* =========================
@@ -1238,6 +1304,21 @@ nav .container {
   }
   .project-info h3 {
     font-size: 1.5rem;
+  }
+}
+@media (max-width: 767px) and (max-width: 767px) {
+  .nav-links a {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 12px;
+  }
+  .nav-links a.active::after {
+    display: none;
+  }
+  .nav-links a.active {
+    color: #2F5BFF;
+    background: rgba(47, 91, 255, 0.08);
+    font-weight: 600;
   }
 }
 .hr-sfumata {
@@ -2052,5 +2133,44 @@ nav .container {
 .case-learning p {
   max-width: 560px;
   color: #666666;
+  line-height: 1.6;
+}
+
+.case-contact {
+  width: min(100% - 40px, 1400px);
+  margin: 80px auto 0;
+  padding: 80px 48px;
+  border-radius: 32px;
+  background: radial-gradient(circle at 20% 20%, rgba(12, 149, 119, 0.12), transparent 34%), radial-gradient(circle at 80% 80%, rgba(157, 0, 99, 0.12), transparent 36%), rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), 0 16px 40px rgba(26, 26, 26, 0.06);
+}
+
+.case-contact-inner {
+  max-width: 760px;
+}
+
+.case-contact-eyebrow {
+  margin-bottom: 16px;
+  color: var(--project-primary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.case-contact h2 {
+  margin-bottom: 20px;
+  color: #1A1A1A;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.case-contact p:not(.case-contact-eyebrow) {
+  max-width: 620px;
+  margin-bottom: 32px;
+  color: #666666;
+  font-size: 1.125rem;
   line-height: 1.6;
 }/*# sourceMappingURL=style.css.map */
