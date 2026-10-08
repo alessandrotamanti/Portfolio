@@ -1181,36 +1181,37 @@ nav .container {
 .projects-page {
   width: min(100% - 40px, 1200px);
   margin-inline: auto;
-  padding: 96px 0 120px;
+  padding: 88px 0 120px;
 }
 
 .projects-page-header {
-  max-width: 850px;
-  margin-bottom: 72px;
+  max-width: 900px;
+  margin-bottom: 56px;
 }
 
 .projects-page-header .eyebrow {
-  margin-bottom: 16px;
-  font-size: large;
+  margin-bottom: 14px;
+  font-size: 1rem;
 }
 
 .projects-page-header h1 {
   font-size: clamp(3rem, 5vw, 4.5rem);
-  letter-spacing: -0.03em;
-  margin-bottom: 24px;
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  margin-bottom: 22px;
 }
 
 .projects-page-description {
-  max-width: 700px;
+  max-width: 720px;
   font-size: 1.125rem;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 /* PROJECTS GRID */
 .projects-page-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 72px 32px;
+  gap: 64px 32px;
 }
 
 /* PROJECT CARD */
