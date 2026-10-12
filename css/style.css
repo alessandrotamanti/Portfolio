@@ -2896,7 +2896,55 @@ nav .container {
   background: #FBDC02;
 }
 
+.case-benchmark-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.case-benchmark-card {
+  padding: 28px 0;
+  border-top: 2px solid var(--project-primary);
+}
+
+.case-benchmark-number {
+  display: block;
+  margin-bottom: 32px;
+  color: #8A6B00;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.case-benchmark-card h3 {
+  max-width: 320px;
+  margin-bottom: 14px;
+  color: #1A1A1A;
+  font-size: 1.35rem;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.case-benchmark-card p {
+  max-width: 340px;
+  color: #666666;
+  line-height: 1.6;
+}
+
 @media (max-width: 767px) {
+  .case-benchmark-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .case-benchmark-card {
+    padding: 24px 0 0;
+  }
+  .case-benchmark-number {
+    margin-bottom: 20px;
+  }
+  .case-benchmark-card h3,
+  .case-benchmark-card p {
+    max-width: none;
+  }
   .case-as-is-analysis {
     margin-top: 48px;
   }
