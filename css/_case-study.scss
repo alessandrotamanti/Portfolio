@@ -1815,3 +1815,250 @@
         grid-template-columns: 1fr;
     }
 }
+
+// ========================================
+// LAST MINUTE SOTTO CASA
+// ========================================
+
+.project-case--lmsc {
+    --project-primary: #fbdc02;
+    --project-secondary: #2b292f;
+
+    --project-accent: #8A6B00;
+
+    --project-primary-soft: rgba(251, 220, 2, 0.28);
+    --project-secondary-soft: rgba(43, 41, 47, 0.16);
+}
+
+.project-case--lmsc .case-eyebrow,
+.project-case--lmsc .project-category,
+.project-case--lmsc .case-card-number,
+.project-case--lmsc .case-contact-eyebrow {
+    color: var(--project-accent);
+}
+
+.project-case--lmsc .case-overview-card::before {
+    background: var(--project-primary);
+}
+
+.project-case--lmsc .case-overview-card:nth-child(2)::before {
+    background: var(--project-secondary);
+}
+
+// HERO IMAGE SHADOW
+
+.project-case--lmsc .case-hero-image {
+    filter:
+        drop-shadow(6px 10px 12px rgba(43, 41, 47, 0.10));
+}
+
+// ========================================
+// LMSC — ANALISI AS-IS
+// ========================================
+
+.case-as-is-visual {
+    width: 100%;
+
+    padding: 16px;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    background: rgba(255, 255, 255, 0.48);
+    border: 1px solid rgba(26, 26, 26, 0.07);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.8),
+        0 16px 40px rgba(26, 26, 26, 0.06);
+}
+
+.case-as-is-visual img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    border-radius: 14px;
+}
+
+.case-as-is-visual {
+    display: block;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.case-as-is-visual:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.8),
+        0 20px 44px rgba(26, 26, 26, 0.09);
+}
+
+.case-as-is-visual:focus-visible {
+    outline: 3px solid #8A6B00;
+    outline-offset: 4px;
+}
+
+
+// ========================================
+// AS-IS — PUNTI DI FORZA / DEBOLEZZA
+// ========================================
+
+.case-as-is-analysis {
+    margin-top: 64px;
+}
+
+.case-as-is-group + .case-as-is-group {
+    margin-top: 80px;
+}
+
+.case-as-is-label {
+    margin-bottom: 24px;
+
+    color: var(--project-accent);
+
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.case-as-is-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+// CARD
+
+.case-as-is-card {
+    position: relative;
+
+    padding: 28px;
+
+    border-radius: 24px;
+
+    background: rgba(255, 255, 255, 0.48);
+    border: 1px solid rgba(26, 26, 26, 0.07);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.8),
+        0 12px 32px rgba(26, 26, 26, 0.05);
+}
+
+
+// DETTAGLIO SUPERIORE
+
+.case-as-is-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 28px;
+
+    width: 56px;
+    height: 4px;
+
+    border-radius: 0 0 6px 6px;
+
+    background: var(--project-primary);
+    
+}
+
+
+// NUMERO
+
+.case-as-is-card span {
+    display: block;
+
+    margin: 8px 0 24px;
+
+    color: var(--project-accent);
+
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+
+// TITOLO
+
+.case-as-is-card h3 {
+    margin-bottom: 12px;
+
+    color: $color-dark;
+
+    font-size: 1.25rem;
+    line-height: 1.25;
+}
+
+
+// TESTO
+
+// PUNTI DI FORZA — GIALLO SCURO
+
+.project-case--lmsc
+.case-as-is-group--strengths
+.case-as-is-card > span {
+    color: #8A6B00;
+}
+
+.project-case--lmsc
+.case-as-is-group--strengths
+.case-as-is-card::before {
+    background: #8A6B00;
+}
+
+
+// PUNTI DI DEBOLEZZA — GIALLO BRAND
+
+.project-case--lmsc
+.case-as-is-group--weaknesses
+.case-as-is-card > span {
+    color: #8A6B00;
+}
+
+.project-case--lmsc
+.case-as-is-group--weaknesses
+.case-as-is-card::before {
+    background: #FBDC02;
+}
+
+
+
+// ========================================
+// MOBILE
+// ========================================
+
+@media (max-width: 767px) {
+
+    .case-as-is-analysis {
+        margin-top: 48px;
+    }
+
+    .case-as-is-group + .case-as-is-group {
+        margin-top: 56px;
+    }
+
+    .case-as-is-grid {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+    .case-as-is-card {
+        padding: 24px;
+
+        border-radius: 20px;
+    }
+
+    .case-as-is-card::before {
+        left: 24px;
+    }
+}
