@@ -797,21 +797,99 @@ nav .container {
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    width: min(100% - 32px, 1200px);
     gap: 40px;
     padding: 32px 24px;
     border-radius: 24px;
+    overflow: hidden;
   }
+  /* CONTENUTO */
   .about-content {
     order: 1;
+    width: 100%;
+    min-width: 0;
     gap: 20px;
   }
-  .about-image {
+  .about-content > p,
+  .about-content h2 {
+    max-width: 100%;
+  }
+  /* VISUAL */
+  .about-visual {
     order: 2;
+    width: 100%;
+    height: auto;
+    min-height: 0;
     aspect-ratio: 4/3;
+    border-radius: 18px;
+    overflow: hidden;
+  }
+  /* ETICHETTE */
+  .about-tag {
+    max-width: calc(100% - 32px);
+    padding: 10px 16px;
+    border-width: 1.5px;
+    border-radius: 14px;
+    font-size: clamp(1.1rem, 6vw, 1.6rem);
+    box-shadow: 3px 4px 0 rgba(26, 26, 26, 0.9);
+    white-space: nowrap;
+  }
+  .about-tag-communication {
+    top: 28%;
+    left: 5%;
+  }
+  .about-tag-design {
+    top: 50%;
+    right: 5%;
+  }
+  /* FIGMA SELECTION */
+  .figma-selection {
+    width: 82%;
+    height: 42%;
+    left: 9%;
+    top: 22%;
+  }
+  /* CURSORE */
+  .about-cursor {
+    width: 28px;
+    height: 28px;
+    top: 65%;
+    left: 6%;
+  }
+  /* SKILLS */
+  .skills {
+    width: 100%;
+    min-width: 0;
+    margin-top: 8px;
+  }
+  .about-skills {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .skill-chip {
+    max-width: 100%;
+    padding: 8px 14px;
+    font-size: 0.8125rem;
+  }
+  /* TOOLS */
+  .about-tools {
+    width: 100%;
+  }
+  .tools-list {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .tool-icon {
+    width: 56px;
+    height: 56px;
+    flex: 0 0 56px;
     border-radius: 16px;
   }
-  .skills {
-    margin-top: 8px;
+  .tool-icon img {
+    width: 28px;
+    height: 28px;
   }
 }
 .personal-projects {
