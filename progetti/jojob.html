@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jojob — Alessandro Tamanti</title>
+
+    <meta
+        name="description"
+        content="Website redesign di Jojob, piattaforma dedicata al carpooling aziendale"
+    >
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../favicon/favicon.png" type="image/svg+xml">
+</head>
+
+<body>
+
+<main class="project-case project-case--jojob">
+
+ <header>
+        <nav>
+            <div class="container">
+
+                <a href="../index.html" class="logo">
+                    Alessandro Tamanti
+                </a>
+
+                <input
+                    type="checkbox"
+                    id="menu-toggle"
+                    class="menu-checkbox"
+                >
+
+                <label
+                    for="menu-toggle"
+                    class="menu-toggle"
+                    aria-label="Apri menu"
+                >
+                    <span class="menu-open">☰</span>
+                    <span class="menu-close">×</span>
+                </label>
+
+                <div class="nav-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../progetti.html">Progetti</a>
+                    <a href="../contatti.html">Contatti</a>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+
+    <main class="project-case project-case--jojob">
+
+        <!-- ========================================
+             HERO
+        ======================================== -->
+
+        <section class="case-hero" aria-labelledby="jojob-title">
+
+            <div class="case-hero-intro">
+
+                <p class="case-eyebrow">
+                    UX/UI Redesign · Website Responsive · 2026
+                </p>
+
+                <h1 id="jojob-title">
+                    Jojob
+                </h1>
+
+                <p class="case-hero-description">
+                    Tre pubblici, esigenze diverse. Un sito riprogettato
+                    per guidare persone, aziende e territori verso
+                    la soluzione di carpooling più adatta.
+                </p>
+
+
+            </div>
+
+
+            <div class="case-hero-image">
+
+                <img
+                    src="../immagini/mockup-jojob.webp"
+                    alt="Mockup del redesign del sito Jojob"
+                    fetchpriority="high"
+                    decoding="async"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             01 · OVERVIEW
+        ======================================== -->
+
+        <section
+            class="case-section case-overview"
+            aria-labelledby="jojob-overview-title"
+        >
+
+            <div class="case-section-heading">
+
+                <p class="case-eyebrow">
+                    01 · Overview
+                </p>
+
+                <h2 id="jojob-overview-title">
+                    Un servizio condiviso,<br>
+                    tre percorsi da rendere chiari
+                </h2>
+
+                <p class="case-section-description">
+                    Jojob promuove il carpooling casa-lavoro attraverso
+                    un’app per i pendolari e soluzioni dedicate ad aziende
+                    ed enti locali. Ho riprogettato il sito web per rendere
+                    più chiara l’offerta, facilitare l’orientamento e
+                    rispondere ai bisogni dei tre pubblici.
+                </p>
+
+            </div>
+
+
+            <div class="case-overview-grid">
+
+                <!-- 01 · CONTESTO -->
+
+                <article class="case-overview-card">
+
+                    <span class="case-card-number" aria-hidden="true">
+                        01
+                    </span>
+
+                    <h3>Contesto</h3>
+
+                    <p>
+                        Un unico sito si rivolge a chi vuole condividere
+                        il tragitto, a chi gestisce la mobilità aziendale
+                        e a chi cerca soluzioni per il proprio territorio.
+                    </p>
+
+                </article>
+
+
+                <!-- 02 · PROBLEMA -->
+
+                <article class="case-overview-card">
+
+                    <span class="case-card-number" aria-hidden="true">
+                        02
+                    </span>
+
+                    <h3>Problema</h3>
+
+                    <p>
+                        La gerarchia dei contenuti e i punti di accesso
+                        rendono poco immediata la scelta del percorso.
+                        Criticità di interazione e accessibilità aggiungono
+                        ostacoli alla navigazione.
+                    </p>
+
+                </article>
+
+
+                <!-- 03 · CHALLENGE -->
+
+                <article class="case-overview-card">
+
+                    <span class="case-card-number" aria-hidden="true">
+                        03
+                    </span>
+
+                    <h3>Challenge</h3>
+
+                    <p>
+                        Progettare percorsi riconoscibili e contenuti
+                        pertinenti per accompagnare ogni pubblico verso
+                        il download dell’app, la richiesta di una demo
+                        o un contatto informativo.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- ========================================
+     02 · ANALISI AS-IS
+======================================== -->
+
+<section
+    class="case-section jojob-audit"
+    aria-labelledby="jojob-audit-title"
+>
+
+    <div class="case-section-heading">
+
+        <p class="case-eyebrow">
+            02 · Analisi As-Is
+        </p>
+
+        <h2 id="jojob-audit-title">
+            Dove la navigazione<br>
+            perde chiarezza
+        </h2>
+
+        <p class="case-section-description">
+            Ho analizzato il sito su desktop e mobile attraverso
+            le <strong>10 euristiche di Nielsen</strong> e i <strong>5 principi di usabilità</strong>.
+            Ho ricondotto le criticità a quattro aree di intervento:
+            orientamento, visibilità delle azioni, coerenza delle
+            interazioni e accessibilità.
+        </p>
+
+    </div>
+
+
+    <!-- HOMEPAGE ORIGINALE -->
+
+    <figure class="jojob-audit-visual">
+
+    <video
+        autoplay
+        muted
+        loop
+        playsinline
+        controls
+        preload="metadata"
+        aria-label="Animazione della hero del sito originale Jojob"
+    >
+        <source
+            src="../immagini/jojob-oldweb-hero.webm"
+            type="video/webm"
+        >
+
+        Il tuo browser non supporta questo video.
+    </video>
+
+        <figcaption>
+            Hero originale documentata durante la discovery.
+
+            <a
+                href="https://www.jojobrt.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Visita il sito originale ↗
+            </a>
+        </figcaption>
+
+    </figure>
+
+
+    <!-- CRITICITÀ PRINCIPALI -->
+
+    <div class="jojob-audit-grid">
+
+        <article class="jojob-audit-card">
+
+            <span class="jojob-audit-number" aria-hidden="true">
+                01
+            </span>
+
+            <h3>Percorsi poco distinti</h3>
+
+            <p>
+                Aziende e territori compaiono tardi nella homepage.
+                La gerarchia dei contenuti rende poco immediato
+                individuare il percorso adatto al proprio ruolo.
+            </p>
+
+        </article>
+
+
+        <article class="jojob-audit-card">
+
+            <span class="jojob-audit-number" aria-hidden="true">
+                02
+            </span>
+
+            <h3>Azioni poco visibili</h3>
+
+            <p>
+                La hero non propone una CTA principale.
+                Nel blocco dedicato all’app manca un collegamento
+                diretto al download, aggiungendo passaggi al percorso.
+            </p>
+
+        </article>
+
+
+        <article class="jojob-audit-card">
+
+            <span class="jojob-audit-number" aria-hidden="true">
+                03
+            </span>
+
+            <h3>Interazioni incoerenti</h3>
+
+            <p>
+                Alcuni elementi decorativi sembrano pulsanti.
+                Menu e form presentano comportamenti instabili su
+                mobile, con errori e feedback non sempre chiari.
+            </p>
+
+        </article>
+
+
+        <article class="jojob-audit-card">
+
+            <span class="jojob-audit-number" aria-hidden="true">
+                04
+            </span>
+
+            <h3>Barriere di accessibilità</h3>
+
+            <p>
+                Contrasti insufficienti, testi alternativi mancanti
+                e difficoltà di navigazione da tastiera ostacolano
+                la lettura e l’utilizzo di alcuni contenuti.
+            </p>
+
+        </article>
+
+    </div>
+
+
+    <!-- PUNTI DI FORZA -->
+
+    <aside
+        class="jojob-audit-strengths"
+        aria-labelledby="jojob-strengths-title"
+    >
+
+        <h3 id="jojob-strengths-title">
+            Una base da valorizzare
+        </h3>
+
+        <p>
+            Illustrazioni coerenti, dati sull’impatto del servizio
+            e certificazioni offrono già elementi utili per comunicarne
+            il valore. Il redesign mantiene la riconoscibilità del
+            brand e lavora sulla struttura dell’esperienza.
+        </p>
+
+    </aside>
+
+</section>
+
+<!-- ========================================
+     03 · BENCHMARKING
+======================================== -->
+
+<section
+    class="case-section jojob-benchmark"
+    aria-labelledby="jojob-benchmark-title"
+>
+
+    <div class="case-section-heading">
+
+        <p class="case-eyebrow">
+            03 · Benchmarking
+        </p>
+
+        <h2 id="jojob-benchmark-title">
+            Osservare le alternative,<br>
+            definire le priorità
+        </h2>
+
+        <p class="case-section-description">
+            Ho confrontato Jojob con otto concorrenti diretti e
+            indiretti, analizzando navigazione, CTA, presentazione
+            dell’offerta e contenuti di supporto. Dal confronto
+            ho selezionato tre indicazioni utili al redesign.
+        </p>
+
+    </div>
+
+    <!-- SCREENSHOT BENCHMARK -->
+
+<figure class="jojob-benchmark-visual">
+
+    <a
+        href="../immagini/benchmarking-jojob-14.png"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Apri il confronto completo a dimensione intera, in una nuova scheda"
+    >
+        <img
+            src="../immagini/benchmarking-jojob-14.png"
+            alt="Tabella comparativa di Jojob e dei concorrenti diretti e indiretti."
+            loading="lazy"
+            decoding="async"
+        >
+    </a>
+
+    <figcaption>
+        Analisi comparativa · Clicca per ingrandire
+    </figcaption>
+
+</figure>
+
+    <!-- INDICAZIONI PER IL REDESIGN -->
+
+    <div class="jojob-benchmark-grid">
+
+        <article class="case-overview-card jojob-benchmark-card">
+
+            <span class="case-card-number" aria-hidden="true">
+                01
+            </span>
+
+            <h3>Azioni subito riconoscibili</h3>
+
+            <p>
+                Nel confronto, KINTO, BlaBlaCar, Moovit e Kombo
+                presentano una CTA primaria nella hero.
+                In Jojob questo punto di accesso è assente.
+            </p>
+
+            <p class="jojob-benchmark-takeaway">
+
+                <strong>Per Jojob</strong>
+
+                Offrire tre ingressi chiari già nella hero,
+                uno per ciascun pubblico.
+
+            </p>
+
+        </article>
+
+
+        <article class="case-overview-card jojob-benchmark-card">
+
+            <span class="case-card-number" aria-hidden="true">
+                02
+            </span>
+
+            <h3>Un contatto più<br>concreto e chiaro</h3>
+
+            <p>
+                COMOVEE, MOVESION e KINTO propongono la
+                possibilità di richiedere una demo, un’opzione
+                non presente nel sito Jojob analizzato.
+            </p>
+
+            <p class="jojob-benchmark-takeaway">
+
+                <strong>Per Jojob</strong>
+
+                Rendere la richiesta di una demo un’azione
+                riconoscibile e visibile.
+
+            </p>
+
+        </article>
+
+
+        <article class="case-overview-card jojob-benchmark-card">
+
+            <span class="case-card-number" aria-hidden="true">
+                03
+            </span>
+
+            <h3>Fiducia prima dell’adesione</h3>
+
+            <p>
+                COMOVEE, BePooler e BlaBlaCar includono
+                testimonianze o recensioni, aggiungendo
+                esperienze d’uso alla descrizione del servizio.
+            </p>
+
+            <p class="jojob-benchmark-takeaway">
+
+                <strong>Per Jojob</strong>
+
+                Affiancare ai benefici testimonianze e
+                contenuti di rassicurazione.
+
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+<!-- ========================================
+     04 · RICERCA UTENTE
+======================================== -->
+
+<section
+    class="case-section jojob-research"
+    aria-labelledby="jojob-research-title"
+>
+
+    <div class="case-section-heading">
+
+        <p class="case-eyebrow">
+            04 · Ricerca utente
+        </p>
+
+        <h2 id="jojob-research-title">
+            Capire cosa motiva<br>
+            e cosa frena l’adozione
+        </h2>
+
+        <p class="case-section-description">
+            Ho costruito un questionario con domande chiuse e
+            aperte, differenziando il percorso in base al ruolo
+            del partecipante. L’obiettivo era esplorare abitudini
+            di mobilità, aspettative e resistenze verso il carpooling.
+        </p>
+
+    </div>
+
+
+    <!-- COMPOSIZIONE DEL CAMPIONE -->
+
+    <div
+        class="jojob-research-sample"
+        aria-label="Composizione del campione"
+    >
+
+        <div class="jojob-research-total">
+
+            <strong>15</strong>
+
+            <span>
+                partecipanti al questionario
+            </span>
+
+        </div>
+
+
+        <ul class="jojob-research-breakdown">
+
+            <li>
+                <strong>5</strong>
+                <span>Referenti aziendali</span>
+            </li>
+
+            <li>
+                <strong>1</strong>
+                <span>Risposta nel segmento territori</span>
+            </li>
+
+            <li>
+                <strong>9</strong>
+                <span>Persone / pendolari</span>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <br>
+
+
+
+    <!-- RISULTATI PRINCIPALI -->
+
+    <div class="jojob-research-grid">
+
+        <!-- AZIENDE -->
+
+        <article class="case-overview-card jojob-research-card">
+
+            <p class="jojob-research-target">
+                Aziende · B2B
+            </p>
+
+            <div class="jojob-research-stat">
+
+                <strong>3 su 5</strong>
+
+                <p>
+                    referenti senza una piattaforma non conoscevano
+                    soluzioni strutturate di carpooling.
+                </p>
+
+            </div>
+
+            <h3>Rendere comprensibile l’offerta</h3>
+
+            <p>
+                Le risposte aperte riportano dubbi sui costi,
+                sui tempi per l’implementazione e
+                sull’effettiva partecipazione dei dipendenti.
+            </p>
+
+            <p class="jojob-research-direction">
+
+                <strong>Direzione progettuale</strong>
+
+                Chiarire funzionamento, benefici e processo
+                di adozione, con un accesso riconoscibile alla demo.
+
+            </p>
+
+        </article>
+
+
+        <!-- PERSONE -->
+
+        <article
+            class="case-overview-card jojob-research-card jojob-research-card--people"
+        >
+
+            <p class="jojob-research-target">
+                Persone · B2C
+            </p>
+
+            <div class="jojob-research-stat">
+
+                <strong>6 su 9</strong>
+
+                <p>
+                    indicano il risparmio economico come leva principale
+                    per adottare il carpooling negli spostamenti casa-lavoro.
+                </p>
+
+            </div>
+
+            <h3>Risparmio e libertà di scelta</h3>
+
+            <p>
+                Nelle risposte aperte ricorrono il disagio
+                della socialità forzata e il timore di non
+                trovarsi bene con il compagno di viaggio.
+            </p>
+
+            <p class="jojob-research-direction">
+
+                <strong>Direzione progettuale</strong>
+
+                Affiancare ai benefici economici una spiegazione
+                chiara dell’app e contenuti su fiducia e autonomia.
+
+            </p>
+
+        </article>
+
+    </div>
+
+
+    <!-- TARGET DA APPROFONDIRE -->
+
+    <aside
+        class="jojob-research-limit"
+        aria-labelledby="jojob-research-limit-title"
+    >
+
+        <h3 id="jojob-research-limit-title">
+            Territori: un target da approfondire
+        </h3>
+
+        <p>
+            L’unica risposta raccolta in questo segmento proviene
+            da una struttura assistenziale, la cui natura pubblica
+            o privata non è stata accertata. Le ipotesi sul target
+            B2G restano quindi da verificare con referenti istituzionali.
+        </p>
+
+    </aside>
+
+</section>
+
+<!-- ========================================
+     05 · PERSONAS E USER JOURNEY
+======================================== -->
+
+<section
+    class="case-section jojob-personas"
+    aria-labelledby="jojob-personas-title"
+>
+
+    <div class="case-section-heading">
+
+        <p class="case-eyebrow">
+            05 · Personas e user journey
+        </p>
+
+        <h2 id="jojob-personas-title">
+            Le personas<br>
+            e journey di Jojob
+        </h2>
+
+        <p class="case-section-description">
+            Ho sintetizzato questionario e ricerca documentale
+            in tre personas, collegando obiettivi, ostacoli e
+            informazioni necessarie alla scelta. Le journey
+            hanno aiutato a individuare dove intervenire sul percorso.
+        </p>
+
+    </div>
+
+
+    <!-- PERSONAS -->
+
+    <div class="jojob-personas-grid">
+
+        <!-- AZIENDE — ROSSO -->
+
+        <article
+            class="case-overview-card jojob-persona-card jojob-persona-card--companies"
+        >
+
+            <p class="jojob-persona-label">
+                Aziende · B2B
+            </p>
+
+            <div class="jojob-persona-header">
+
+                <img
+                    src="../immagini/giorgia-up.jpg"
+                    alt="Ritratto rappresentativo di Giorgia"
+                    width="80"
+                    height="80"
+                    loading="lazy"
+                >
+
+                <div>
+                    <h3>Giorgia </h3>
+                    <p>Responsabile HR<br> 42 anni</p>
+                </div>
+
+            </div>
+
+            <dl class="jojob-persona-needs">
+
+                <dt>Obiettivo</dt>
+                <dd>
+                    Ottimizzare i parcheggi e valutare i benefici
+                    della mobilità condivisa per l’azienda.
+                </dd>
+
+                <dt>Ostacolo</dt>
+                <dd>
+                    Teme costi di implementazione e una scarsa
+                    partecipazione dei dipendenti.
+                </dd>
+
+                <dt>Cosa cerca sul sito</dt>
+                <dd>
+                    Un’offerta comprensibile, dati concreti e
+                    la possibilità di richiedere una demo.
+                </dd>
+
+            </dl>
+
+        </article>
+
+
+        <!-- TERRITORI — VERDE -->
+
+        <article
+            class="case-overview-card jojob-persona-card jojob-persona-card--territories"
+        >
+
+            <p class="jojob-persona-label">
+                Territori · B2G
+            </p>
+
+            <div class="jojob-persona-header">
+
+                <img
+                    src="../immagini/giovanni-up.jpg"
+                    alt="Ritratto rappresentativo di Giovanni"
+                    width="80"
+                    height="80"
+                    loading="lazy"
+                >
+
+                <div>
+                    <h3>Giovanni</h3>
+                    <p>Assessore alla mobilità <br> 56 anni</p>
+                </div>
+
+            </div>
+
+            <dl class="jojob-persona-needs">
+
+                <dt>Obiettivo</dt>
+                <dd>
+                    Ridurre traffico ed emissioni e integrare
+                    le soluzioni di mobilità del territorio.
+                </dd>
+
+                <dt>Ostacolo</dt>
+                <dd>
+                    Deve gestire vincoli di budget, tempi
+                    decisionali e coordinamento tra enti.
+                </dd>
+
+                <dt>Cosa cerca sul sito</dt>
+                <dd>
+                    Progetti già attivi, informazioni
+                    sull’impatto e un contatto dedicato.
+                </dd>
+
+            </dl>
+
+            <p class="jojob-persona-note">
+                Profilo esplorativo da validare
+                con referenti istituzionali.
+            </p>
+
+        </article>
+
+
+        <!-- PERSONE — BLU -->
+
+        <article
+            class="case-overview-card jojob-persona-card jojob-persona-card--people"
+        >
+
+            <p class="jojob-persona-label">
+                Persone · B2C
+            </p>
+
+            <div class="jojob-persona-header">
+
+                <img
+                    src="../immagini/stefano-up.jpg"
+                    alt="Ritratto rappresentativo di Stefano"
+                    width="80"
+                    height="80"
+                    loading="lazy"
+                >
+
+                <div>
+                    <h3>Stefano</h3>
+                    <p>Addetto alla logistica<br> 31 anni</p>
+                </div>
+
+            </div>
+
+            <dl class="jojob-persona-needs">
+
+                <dt>Obiettivo</dt>
+                <dd>
+                    Risparmiare sul tragitto casa-lavoro
+                    mantenendo una routine semplice.
+                </dd>
+
+                <dt>Ostacolo</dt>
+                <dd>
+                    Teme di perdere autonomia e di non trovarsi
+                    bene con i compagni di viaggio.
+                </dd>
+
+                <dt>Cosa cerca sul sito</dt>
+                <dd>
+                    Una spiegazione chiara dell’app,
+                    rassicurazioni e un accesso diretto al download.
+                </dd>
+
+            </dl>
+
+        </article>
+
+    </div>
+
+
+  <div class="jojob-journey">
+    <div class="case-subsection-heading">
+        <p class="case-eyebrow">Focus · Percorso aziende</p>
+
+        <h3 id="jojob-journey-title">
+            Il percorso di Giorgia: da As-Is a To-Be
+        </h3>
+
+        <p>
+            Ho confrontato il percorso di Giorgia sul sito originale
+            con lo scenario progettato: informazioni sull’offerta più
+            chiare, dati più accessibili e un contatto commerciale
+            più semplice da trovare. Il To-Be descrive l’esperienza
+            prevista dalla riprogettazione.
+        </p>
+    </div>
+
+    <div class="jojob-journey-comparison">
+
+        <figure class="jojob-journey-visual">
+            <a
+                href="../immagini/jojob-journey-giorgia.webp"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Ingrandisci la journey As-Is di Giorgia, in una nuova scheda"
+            >
+                <img
+                    src="../immagini/uj-asis-31.png"
+                    alt="Journey As-Is di Giorgia: ostacoli nella comprensione dell’offerta, nella ricerca di dati e nel contatto commerciale."
+                    width="3072"
+                    height="1728"
+                    loading="lazy"
+                    decoding="async"
+                >
+            </a>
+
+            <figcaption>
+                <strong>As-Is · Il percorso sul sito originale</strong>
+                Ostacoli e opportunità individuati nella journey di Giorgia.
+                Clicca per ingrandire.
+            </figcaption>
+        </figure>
+
+        <figure class="jojob-journey-visual">
+            <a
+                href="../immagini/jojob-journey-giorgia-to-be.webp"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Ingrandisci la journey To-Be di Giorgia, in una nuova scheda"
+            >
+                <img
+                    src="../immagini/uj-tobe-38.png"
+                    alt="Journey To-Be di Giorgia: scenario progettato con un percorso dedicato alle aziende, informazioni sull’offerta, dati e contatti più accessibili."
+                    width="3072"
+                    height="1728"
+                    loading="lazy"
+                    decoding="async"
+                >
+            </a>
+
+            <figcaption>
+                <strong>To-Be · Lo scenario progettato</strong>
+                Le proposte per accompagnare Giorgia dalla scoperta al contatto.
+                Clicca per ingrandire.
+            </figcaption>
+        </figure>
+
+    </div>
+</div>
+
+<!-- 06 · ARCHITETTURA DELL’INFORMAZIONE -->
+
+<section
+    class="case-section jojob-ia"
+    aria-labelledby="jojob-ia-title"
+>
+    <div class="case-section-heading">
+        <p class="case-eyebrow">
+            06 · Architettura dell’informazione
+        </p>
+
+        <h2 id="jojob-ia-title">
+            Una navigazione organizzata per esigenze
+        </h2>
+
+        <p class="case-section-description">
+            Ho riorganizzato i contenuti per distinguere i percorsi
+            di persone, aziende e territori e rendere più visibili
+            i dati sul servizio. L’alberatura è stata affinata durante
+            i wireframe, raccogliendo i tre percorsi sotto la voce
+            “Soluzioni”.
+        </p>
+    </div>
+
+    <figure class="jojob-ia-visual">
+        <a
+            href="../immagini/architettura-14.png"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Ingrandisci la nuova alberatura del sito, in una nuova scheda"
+        >
+            <img
+                src="../immagini/architettura-14.png"
+                alt="Nuova alberatura: il menu comprende Soluzioni, con percorsi per persone, aziende e territori, Osservatori, Chi siamo e Press. Il footer raccoglie anche contenuti di sostenibilità e informazioni legali."
+                width="3072"
+                height="1728"
+                loading="lazy"
+                decoding="async"
+            >
+        </a>
+
+        <figcaption>
+            Alberatura aggiornata durante la fase di wireframing.
+            Clicca per ingrandire.
+        </figcaption>
+    </figure>
+
+    <ol class="jojob-ia-decisions">
+        <li>
+            <h3>I percorsi sotto “Soluzioni”</h3>
+
+            <p>
+                Una voce comune raccoglie le sezioni per persone,
+                aziende e territori. Ogni percorso propone contenuti
+                dedicati: app e FAQ, piani aziendali e PSCL,
+                oppure territori attivi.
+            </p>
+        </li>
+
+        <li>
+            <h3>“Osservatori” nel menu principale</h3>
+
+            <p>
+                I dati sul carpooling diventano accessibili da
+                una voce autonoma, senza dover passare da “Press”.
+                Un contenuto trasversale ai tre target supporta
+                la valutazione del servizio.
+            </p>
+        </li>
+
+        <li>
+            <h3>Etichette legate all’azione</h3>
+
+            <p>
+                “Richiedi una demo” per le aziende e “Richiedi
+                informazioni” per i territori rendono esplicito
+                il passo successivo. “Piani di spostamento (PSCL)”
+                chiarisce il contenuto della sezione.
+            </p>
+        </li>
+    </ol>
+</section>
+
+<!-- 07 · ACCESSIBILITÀ -->
+
+<section
+    class="case-section jojob-accessibility"
+    aria-labelledby="jojob-accessibility-title"
+>
+    <div class="case-section-heading">
+        <p class="case-eyebrow">07 · Accessibilità</p>
+
+        <h2 id="jojob-accessibility-title">
+            Leggere, orientarsi e agire senza barriere
+        </h2>
+
+        <p class="case-section-description">
+            Ho analizzato cinque pagine del sito originale,
+            individuando problemi di contrasto, testi alternativi
+            mancanti, testo giustificato e link duplicati.<br>
+            
+        </p>
+    </div>
+
+    <figure class="jojob-audit-visual jojob-accessibility-visual">
+        <a
+            href="../immagini/jojob-accessibilita-audit-18.png"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Ingrandisci l’analisi di accessibilità, in una nuova scheda"
+        >
+            <img
+                src="../immagini/jojob-accessibilita-audit-18.png"
+                alt="Analisi della pagina Carpooler: contrasti insufficienti, badge degli store privi di testo alternativo e paragrafi giustificati, con le correzioni proposte."
+                width="3072"
+                height="1728"
+                loading="lazy"
+                decoding="async"
+            >
+        </a>
+
+        <figcaption>
+            Esempio dall’analisi della homepage:
+            barriere rilevate e correzioni proposte.
+            Clicca per ingrandire.
+        </figcaption>
+    </figure>
+
+     <div class="case-subsection-heading">
+    <h3>Le barriere nei percorsi delle personas</h3>
+
+    <p>
+        Ho poi riadattato le personas attraverso
+        <strong>scenari ipotetici di accessibilità</strong>,
+        per capire come le barriere potessero influire
+        sui loro percorsi e ricavarne indicazioni progettuali.
+    </p>
+</div>
+
+    <div class="case-overview-grid jojob-accessibility-grid">
+
+
+        <article class="case-overview-card jojob-accessibility-card jojob-accessibility-card--companies">
+            <p class="case-card-number">Giorgia · Aziende</p>
+
+            <h3>Leggere e ingrandire</h3>
+
+            <p>
+                <strong>Scenario:</strong>
+                ipovisione, uso dello zoom e supporto
+                dello screen reader.
+            </p>
+
+            <p>
+                <strong>Barriere:</strong>
+                contrasti deboli e informazioni visive
+                prive di alternative testuali.
+            </p>
+
+            <p>
+                <strong>Direzione progettuale:</strong>
+                migliorare i contrasti, descrivere le immagini
+                informative e prevedere layout utilizzabili
+                con testo ingrandito.
+            </p>
+        </article>
+
+        <article class="case-overview-card jojob-accessibility-card jojob-accessibility-card--territories">
+            <p class="case-card-number">Giovanni · Territori</p>
+
+            <h3>Navigare senza mouse</h3>
+
+            <p>
+                <strong>Scenario:</strong>
+                limitazione motoria temporanea
+                e navigazione da tastiera.
+            </p>
+
+            <p>
+                <strong>Barriere:</strong>
+                link duplicati verso la stessa risorsa
+                aggiungono passaggi inutili al percorso.
+            </p>
+
+            <p>
+                <strong>Direzione progettuale:</strong>
+                unire icona ed etichetta in un unico collegamento
+                e mantenere un ordine di navigazione logico.
+            </p>
+        </article>
+
+        <article class="case-overview-card jojob-accessibility-card jojob-accessibility-card--people">
+            <p class="case-card-number">Stefano · Persone</p>
+
+            <h3>Comprendere i contenuti</h3>
+
+            <p>
+                <strong>Scenario:</strong>
+                dislessia lieve e maggiore fatica
+                nella lettura di testi densi.
+            </p>
+
+            <p>
+                <strong>Barriere:</strong>
+                testo giustificato e blocchi poco strutturati
+                rendono più difficile seguire la lettura.
+            </p>
+
+            <p>
+                <strong>Direzione progettuale:</strong>
+                allineare i testi a sinistra, usare paragrafi
+                brevi e organizzare le FAQ per argomento.
+            </p>
+        </article>
+
+    </div>
+
+    <br>
+
+    <aside
+        class="jojob-accessibility-note"
+        aria-label="Un elemento positivo dell’analisi"
+    >
+        <p>
+            <strong>Da preservare: il focus visibile.</strong>
+            Nell’analisi originale, l’indicatore con doppio
+            contorno bianco e nero è stato valutato positivamente.
+            È un riferimento da mantenere nella riprogettazione.
+        </p>
+    </aside>
+</section>
+
+
+</section>
+
+
+
+
+
+
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <p class="footer-copyright">
+                © 2026 Alessandro Tamanti
+            </p>
+
+            <div class="footer-links">
+
+                <a href="../contatti.html">
+                    Contatti
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/in/alessandro-tamanti-885a18277/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    LinkedIn
+                </a>
+
+                <a
+                    href="https://github.com/alessandrotamanti/Portfolio"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    GitHub
+                </a>
+
+                <a
+                    href="../documenti/alessandro-tamanti-cv.pdf"
+                    download
+                >
+                    CV
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>

@@ -3614,4 +3614,1017 @@ nav .container {
   .case-campaign-card > span {
     margin-bottom: 16px;
   }
+}
+/* ========================================
+   JOJOB — PALETTE
+======================================== */
+.project-case--jojob {
+  --project-primary: #4174AD;
+  --project-secondary: #CE5F4D;
+  --project-tertiary: #5CA16A;
+  --project-accent: #4174AD;
+  --project-primary-soft: rgba(65, 116, 173, 0.24);
+  --project-secondary-soft: rgba(206, 95, 77, 0.14);
+  --project-tertiary-soft: rgba(92, 161, 106, 0.14);
+  /* Tonalità più scure per i piccoli accenti testuali */
+  --project-secondary-ink: #A94C3D;
+  --project-tertiary-ink: #55775C;
+}
+
+/* ========================================
+   JOJOB — HERO
+======================================== */
+.project-case--jojob .case-hero::before {
+  background: radial-gradient(ellipse at 88% 18%, var(--project-primary-soft), transparent 42%), radial-gradient(ellipse at 8% 72%, var(--project-secondary-soft), transparent 38%), radial-gradient(ellipse at 65% 85%, var(--project-tertiary-soft), transparent 34%);
+}
+
+.project-case--jojob .case-hero-image {
+  border-radius: 28px;
+  overflow: hidden;
+  filter: drop-shadow(18px 12px 14px rgba(65, 116, 173, 0.3)) drop-shadow(6px 10px 12px rgba(26, 26, 26, 0.06));
+}
+
+.project-case--jojob .case-hero-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: inherit;
+}
+
+.project-case--jojob .jojob-project-note {
+  margin-top: 24px;
+  color: #555555;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+/* ========================================
+   JOJOB — OVERVIEW
+======================================== */
+.project-case--jojob .case-overview-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* Card 01 — Blu */
+.project-case--jojob .case-overview-card {
+  --card-accent: var(--project-primary);
+}
+
+/* Card 02 — Rosso */
+.project-case--jojob .case-overview-card:nth-child(2) {
+  --card-accent: var(--project-secondary-ink);
+}
+
+/* Card 03 — Verde */
+.project-case--jojob .case-overview-card:nth-child(3) {
+  --card-accent: var(--project-tertiary-ink);
+}
+
+/* Barretta e numero condividono lo stesso colore */
+.project-case--jojob .case-overview-card::before {
+  background: var(--card-accent);
+}
+
+.project-case--jojob .case-overview-card .case-card-number {
+  display: block;
+  margin: 8px 0 20px;
+  color: var(--card-accent);
+}
+
+/* JOJOB — OMBRA INTERNA CARD */
+.project-case--jojob .case-overview-card {
+  --card-inner-shadow: rgba(65, 116, 173, 0.20);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), inset 0 0 24px var(--card-inner-shadow), 0 10px 30px rgba(26, 26, 26, 0.07);
+}
+
+.project-case--jojob .case-overview-card:nth-child(2) {
+  --card-inner-shadow: rgba(206, 95, 77, 0.20);
+}
+
+.project-case--jojob .case-overview-card:nth-child(3) {
+  --card-inner-shadow: rgba(92, 161, 106, 0.20);
+}
+
+/* ========================================
+   JOJOB — TABLET
+======================================== */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .project-case--jojob .case-hero {
+    gap: 32px;
+  }
+  .project-case--jojob .case-overview-card {
+    padding: 24px;
+  }
+  .project-case--jojob .case-overview-card::before {
+    left: 24px;
+  }
+}
+/* ========================================
+   JOJOB — MOBILE
+======================================== */
+@media (max-width: 767px) {
+  .project-case--jojob .case-hero {
+    width: calc(100% - 40px);
+  }
+  .project-case--jojob .case-overview-grid {
+    grid-template-columns: 1fr;
+  }
+  .project-case--jojob .case-overview-card {
+    min-height: auto;
+  }
+  .project-case--jojob .case-overview-card::before {
+    left: 24px;
+  }
+}
+/* ========================================
+   JOJOB — ANALISI AS-IS
+======================================== */
+/* ========================================
+   JOJOB — VIDEO SITO ORIGINALE
+======================================== */
+.project-case--jojob .jojob-audit-visual {
+  width: 100%;
+  margin: 0 auto 80px;
+  padding: 16px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.48);
+  border: 1px solid rgba(26, 26, 26, 0.07);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85), 0 14px 36px rgba(65, 116, 173, 0.08);
+}
+
+.project-case--jojob .jojob-audit-visual video {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 480px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 14px;
+}
+
+.project-case--jojob .jojob-audit-visual figcaption {
+  margin-top: 16px;
+  color: #555555;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.project-case--jojob .jojob-audit-visual figcaption a {
+  display: inline-block;
+  color: var(--project-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.project-case--jojob .jojob-audit-visual a:focus-visible {
+  outline: 3px solid var(--project-primary);
+  outline-offset: 5px;
+}
+
+.project-case--jojob .jojob-audit-visual {
+  position: relative;
+  isolation: isolate;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+@media (max-width: 767px) {
+  .project-case--jojob .jojob-audit-visual {
+    padding: 12px;
+    border-radius: 20px;
+  }
+}
+/* GRIGLIA CRITICITÀ */
+.project-case--jojob .jojob-audit-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* CARD */
+.project-case--jojob .jojob-audit-card {
+  --audit-accent: var(--project-primary);
+  --audit-shadow: rgba(65, 116, 173, 0.10);
+  position: relative;
+  padding: 32px;
+  overflow: hidden;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.46);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), inset 0 0 24px var(--audit-shadow), 0 10px 30px rgba(26, 26, 26, 0.07);
+}
+
+.project-case--jojob .jojob-audit-card:nth-child(even) {
+  --audit-accent: var(--project-secondary-ink);
+  --audit-shadow: rgba(206, 95, 77, 0.10);
+}
+
+/* BARRETTA SUPERIORE */
+.project-case--jojob .jojob-audit-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 32px;
+  width: 64px;
+  height: 4px;
+  border-radius: 0 0 8px 8px;
+  background: var(--audit-accent);
+}
+
+/* NUMERO */
+.project-case--jojob .jojob-audit-number {
+  display: block;
+  margin: 8px 0 20px;
+  color: var(--audit-accent);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* TITOLI E TESTI */
+.project-case--jojob .jojob-audit-card h3,
+.project-case--jojob .jojob-audit-strengths h3 {
+  margin: 0 0 14px;
+  color: #1A1A1A;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.project-case--jojob .jojob-audit-card p,
+.project-case--jojob .jojob-audit-strengths p {
+  margin: 0;
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* PUNTI DI FORZA */
+.project-case--jojob .jojob-audit-strengths {
+  margin-top: 32px;
+  padding: 32px;
+  border-radius: 24px;
+  border-left: 4px solid var(--project-tertiary);
+  background: rgba(92, 161, 106, 0.08);
+}
+
+/* MOBILE */
+@media (max-width: 767px) {
+  .project-case--jojob .jojob-audit-visual {
+    padding: 12px;
+    border-radius: 20px;
+  }
+  .project-case--jojob .jojob-audit-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .project-case--jojob .jojob-audit-card,
+  .project-case--jojob .jojob-audit-strengths {
+    padding: 24px;
+    border-radius: 20px;
+  }
+  .project-case--jojob .jojob-audit-card::before {
+    left: 24px;
+  }
+}
+/* ========================================
+   JOJOB — BENCHMARKING
+======================================== */
+/* PIATTAFORME ANALIZZATE */
+.project-case--jojob .jojob-benchmark-scope {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  margin-bottom: 40px;
+  padding: 24px 0;
+  border-top: 1px solid rgba(26, 26, 26, 0.12);
+  border-bottom: 1px solid rgba(26, 26, 26, 0.12);
+}
+
+.project-case--jojob .jojob-benchmark-scope h3 {
+  margin: 0 0 10px;
+  color: #1A1A1A;
+  font-size: 1.125rem;
+  line-height: 1.3;
+}
+
+.project-case--jojob .jojob-benchmark-scope p {
+  margin: 0;
+  color: #666666;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+}
+
+/* JOJOB — SCREENSHOT BENCHMARK */
+.project-case--jojob .jojob-benchmark-visual {
+  width: 100%;
+  margin: 0 0 40px;
+  padding: 16px;
+  box-sizing: border-box;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.48);
+  border: 1px solid rgba(26, 26, 26, 0.07);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85), 0 14px 36px rgba(65, 116, 173, 0.08);
+}
+
+.project-case--jojob .jojob-benchmark-visual > a {
+  display: block;
+  border-radius: 14px;
+}
+
+.project-case--jojob .jojob-benchmark-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+}
+
+.project-case--jojob .jojob-benchmark-visual figcaption {
+  margin-top: 16px;
+  color: #555555;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.project-case--jojob .jojob-benchmark-visual a:focus-visible {
+  outline: 3px solid var(--project-primary);
+  outline-offset: 5px;
+}
+
+/* JOJOB — GRADIENTE BENCHMARK */
+.project-case--jojob .jojob-benchmark-visual {
+  position: relative;
+  isolation: isolate;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.project-case--jojob .jojob-benchmark-visual::before {
+  content: "";
+  position: absolute;
+  inset: -24px;
+  z-index: -1;
+  border-radius: 40px;
+  background: radial-gradient(ellipse at 15% 20%, rgba(65, 116, 173, 0.24), transparent 55%), radial-gradient(ellipse at 85% 30%, rgba(206, 95, 77, 0.18), transparent 50%), radial-gradient(ellipse at 55% 90%, rgba(92, 161, 106, 0.2), transparent 55%);
+  filter: blur(28px);
+  pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  .project-case--jojob .jojob-benchmark-visual {
+    margin-bottom: 24px;
+    padding: 12px;
+    border-radius: 20px;
+  }
+}
+/* GRIGLIA CARD */
+.project-case--jojob .jojob-benchmark-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.project-case--jojob .jojob-benchmark-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-case--jojob .jojob-benchmark-card > p {
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* INDICAZIONE PROGETTUALE */
+.project-case--jojob .jojob-benchmark-card .jojob-benchmark-takeaway {
+  margin: 24px 0 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(26, 26, 26, 0.1);
+  color: #1A1A1A;
+}
+
+.project-case--jojob .jojob-benchmark-takeaway strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--card-accent);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* TABLET E MOBILE */
+@media (max-width: 1023px) {
+  .project-case--jojob .jojob-benchmark-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .project-case--jojob .jojob-benchmark-card {
+    min-height: auto;
+  }
+}
+@media (max-width: 767px) {
+  .project-case--jojob .jojob-benchmark-scope {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+}
+/* ========================================
+   JOJOB — RICERCA UTENTE
+======================================== */
+/* CAMPIONE */
+.project-case--jojob .jojob-research-sample {
+  display: grid;
+  grid-template-columns: minmax(160px, 0.65fr) minmax(0, 1.35fr);
+  align-items: center;
+  gap: 48px;
+  padding: 32px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.46);
+  border: 1px solid rgba(26, 26, 26, 0.07);
+}
+
+.project-case--jojob .jojob-research-total strong {
+  display: block;
+  color: var(--project-primary);
+  font-size: clamp(4rem, 7vw, 6rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.project-case--jojob .jojob-research-total span {
+  display: block;
+  margin-top: 12px;
+  color: #1A1A1A;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+/* SUDDIVISIONE PARTECIPANTI */
+.project-case--jojob .jojob-research-breakdown {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-case--jojob .jojob-research-breakdown strong {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--project-primary);
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.project-case--jojob .jojob-research-breakdown li:nth-child(2) strong {
+  color: var(--project-secondary-ink);
+}
+
+.project-case--jojob .jojob-research-breakdown li:nth-child(3) strong {
+  color: var(--project-tertiary-ink);
+}
+
+.project-case--jojob .jojob-research-breakdown span {
+  color: #555555;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.project-case--jojob .jojob-research-note {
+  max-width: 760px;
+  margin: 20px 0 40px;
+  color: #555555;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+/* GRIGLIA RISULTATI */
+.project-case--jojob .jojob-research-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* La card persone usa il verde della palette */
+.project-case--jojob .case-overview-card.jojob-research-card--people {
+  --card-accent: var(--project-tertiary-ink);
+  --card-inner-shadow: rgba(92, 161, 106, 0.10);
+}
+
+/* ETICHETTA TARGET */
+.project-case--jojob .jojob-research-card > .jojob-research-target {
+  margin: 8px 0 28px;
+  color: var(--card-accent);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* DATO IN EVIDENZA */
+.project-case--jojob .jojob-research-stat {
+  margin-bottom: 28px;
+}
+
+.project-case--jojob .jojob-research-stat strong {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--card-accent);
+  font-size: clamp(2.75rem, 4.5vw, 4rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.project-case--jojob .jojob-research-stat p,
+.project-case--jojob .jojob-research-card > p {
+  margin: 0;
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* DIREZIONE PROGETTUALE */
+.project-case--jojob .jojob-research-card .jojob-research-direction {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(26, 26, 26, 0.1);
+  color: #1A1A1A;
+}
+
+.project-case--jojob .jojob-research-direction strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--card-accent);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* NOTA TERRITORI */
+.project-case--jojob .jojob-research-limit {
+  margin-top: 32px;
+  padding: 32px;
+  border-radius: 24px;
+  border-left: 4px solid var(--project-secondary);
+  background: rgba(206, 95, 77, 0.07);
+}
+
+.project-case--jojob .jojob-research-limit h3 {
+  margin: 0 0 14px;
+  color: #1A1A1A;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.project-case--jojob .jojob-research-limit p {
+  margin: 0;
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* ========================================
+   JOJOB — COLORI PER TARGET
+======================================== */
+/* CAMPIONE: aziende, territori, persone */
+.project-case--jojob .jojob-research-breakdown li:nth-child(1) strong {
+  color: var(--project-secondary-ink);
+}
+
+.project-case--jojob .jojob-research-breakdown li:nth-child(2) strong {
+  color: var(--project-tertiary-ink);
+}
+
+.project-case--jojob .jojob-research-breakdown li:nth-child(3) strong {
+  color: var(--project-primary);
+}
+
+/* CARD AZIENDE — ROSSO */
+.project-case--jojob .case-overview-card.jojob-research-card {
+  --card-accent: var(--project-secondary-ink);
+  --card-inner-shadow: rgba(206, 95, 77, 0.10);
+}
+
+/* CARD PERSONE — BLU */
+.project-case--jojob .case-overview-card.jojob-research-card--people {
+  --card-accent: var(--project-primary);
+  --card-inner-shadow: rgba(65, 116, 173, 0.10);
+}
+
+/* RIQUADRO TERRITORI — VERDE */
+.project-case--jojob .jojob-research-limit {
+  border-left-color: var(--project-tertiary);
+  background: rgba(92, 161, 106, 0.08);
+}
+
+/* TABLET */
+@media (max-width: 1023px) {
+  .project-case--jojob .jojob-research-sample {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+/* MOBILE */
+@media (max-width: 767px) {
+  .project-case--jojob .jojob-research-sample,
+  .project-case--jojob .jojob-research-limit {
+    padding: 24px;
+    border-radius: 20px;
+  }
+  .project-case--jojob .jojob-research-breakdown {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .project-case--jojob .jojob-research-breakdown li {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    align-items: center;
+    gap: 16px;
+  }
+  .project-case--jojob .jojob-research-breakdown strong {
+    margin: 0;
+    font-size: 2rem;
+  }
+  .project-case--jojob .jojob-research-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+.project-case--jojob .jojob-research-total strong {
+  color: #545353;
+}
+
+/* ========================================
+   JOJOB — PERSONAS
+======================================== */
+.project-case--jojob .jojob-personas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* COLORI PER TARGET */
+.project-case--jojob .case-overview-card.jojob-persona-card--companies {
+  --card-accent: var(--project-secondary-ink);
+  --card-inner-shadow: rgba(206, 95, 77, 0.20);
+}
+
+.project-case--jojob .case-overview-card.jojob-persona-card--territories {
+  --card-accent: var(--project-tertiary-ink);
+  --card-inner-shadow: rgba(92, 161, 106, 0.25);
+}
+
+.project-case--jojob .case-overview-card.jojob-persona-card--people {
+  --card-accent: var(--project-primary);
+  --card-inner-shadow: rgba(65, 116, 173, 0.20);
+}
+
+/* ETICHETTA TARGET */
+.project-case--jojob .jojob-persona-label {
+  margin: 8px 0 24px;
+  color: var(--card-accent);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* RITRATTO E NOME */
+.project-case--jojob .jojob-persona-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.project-case--jojob .jojob-persona-header img {
+  display: block;
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center 25%;
+     object-position: center 25%;
+  border-radius: 18px;
+}
+
+.project-case--jojob .jojob-persona-header h3 {
+  margin: 0 0 6px;
+}
+
+.project-case--jojob .jojob-persona-header p {
+  margin: 0;
+  color: #666666;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* BISOGNI E OSTACOLI */
+.project-case--jojob .jojob-persona-needs {
+  margin: 0;
+}
+
+.project-case--jojob .jojob-persona-needs dt {
+  margin-bottom: 8px;
+  color: #1A1A1A;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.project-case--jojob .jojob-persona-needs dt:not(:first-child) {
+  margin-top: 20px;
+}
+
+.project-case--jojob .jojob-persona-needs dd {
+  margin: 0;
+  color: #666666;
+  line-height: 1.6;
+}
+
+.project-case--jojob .jojob-persona-card .jojob-persona-note {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(26, 26, 26, 0.1);
+  color: #555555;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+/* ========================================
+   JOJOB — USER JOURNEY
+======================================== */
+.project-case--jojob .jojob-journey {
+  margin-top: 80px;
+}
+
+.project-case--jojob .jojob-journey .case-eyebrow {
+  margin-bottom: 14px;
+  color: var(--project-secondary-ink);
+}
+
+/* CONTENITORE TABELLA */
+.project-case--jojob .jojob-journey-scroll {
+  overflow-x: auto;
+  border: 1px solid rgba(26, 26, 26, 0.1);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.46);
+}
+
+.project-case--jojob .jojob-journey-scroll:focus-visible {
+  outline: 3px solid var(--project-secondary-ink);
+  outline-offset: 5px;
+}
+
+/* TABELLA */
+.project-case--jojob .jojob-journey-table {
+  width: 100%;
+  min-width: 780px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.project-case--jojob .jojob-journey-table th,
+.project-case--jojob .jojob-journey-table td {
+  padding: 20px;
+  vertical-align: top;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.project-case--jojob .jojob-journey-table thead {
+  color: #1A1A1A;
+  background: rgba(206, 95, 77, 0.08);
+}
+
+.project-case--jojob .jojob-journey-table th {
+  font-weight: 600;
+}
+
+.project-case--jojob .jojob-journey-table tbody th {
+  color: var(--project-secondary-ink);
+}
+
+.project-case--jojob .jojob-journey-table td {
+  color: #666666;
+}
+
+.project-case--jojob .jojob-journey-table tbody tr {
+  border-top: 1px solid rgba(26, 26, 26, 0.08);
+}
+
+.project-case--jojob .jojob-journey-hint {
+  display: none;
+}
+
+/* TABLET E MOBILE */
+@media (max-width: 1023px) {
+  .project-case--jojob .jojob-personas-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .project-case--jojob .jojob-journey-hint {
+    display: block;
+    margin-top: 12px;
+    color: #555555;
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+}
+@media (max-width: 767px) {
+  .project-case--jojob .jojob-journey {
+    margin-top: 56px;
+  }
+  .project-case--jojob .jojob-journey-scroll {
+    border-radius: 20px;
+  }
+}
+/* JOJOB — SCREENSHOT USER JOURNEY */
+.project-case--jojob .jojob-journey-visual {
+  width: 100%;
+  margin: 0;
+  padding: 16px;
+  box-sizing: border-box;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.48);
+  border: 1px solid rgba(26, 26, 26, 0.07);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85), 0 14px 36px rgba(206, 95, 77, 0.1);
+}
+
+.project-case--jojob .jojob-journey-visual > a {
+  display: block;
+  border-radius: 14px;
+}
+
+.project-case--jojob .jojob-journey-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+}
+
+.project-case--jojob .jojob-journey-visual figcaption {
+  margin-top: 16px;
+  color: #555555;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.project-case--jojob .jojob-journey-visual a:focus-visible {
+  outline: 3px solid var(--project-secondary-ink);
+  outline-offset: 5px;
+}
+
+@media (max-width: 767px) {
+  .project-case--jojob .jojob-journey-visual {
+    padding: 12px;
+    border-radius: 20px;
+  }
+}
+.project-case--jojob .jojob-journey-comparison {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 28px;
+}
+
+.project-case--jojob .jojob-journey-visual figcaption strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #1A1A1A;
+}
+
+/* JOJOB — ARCHITETTURA DELL’INFORMAZIONE */
+.project-case--jojob .jojob-ia-visual {
+  width: 100%;
+  margin: 0 0 40px;
+  padding: 16px;
+  box-sizing: border-box;
+  border: 1px solid rgba(26, 26, 26, 0.07);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.48);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85), 0 14px 36px rgba(65, 116, 173, 0.08);
+}
+
+.project-case--jojob .jojob-ia-visual > a {
+  display: block;
+  border-radius: 14px;
+}
+
+.project-case--jojob .jojob-ia-visual a:focus-visible {
+  outline: 3px solid var(--project-primary);
+  outline-offset: 5px;
+}
+
+.project-case--jojob .jojob-ia-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+}
+
+.project-case--jojob .jojob-ia-visual figcaption {
+  margin-top: 16px;
+  color: #555555;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.project-case--jojob .jojob-ia-decisions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-case--jojob .jojob-ia-decisions li {
+  min-width: 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(26, 26, 26, 0.16);
+}
+
+.project-case--jojob .jojob-ia-decisions h3 {
+  margin: 0 0 12px;
+  color: #1A1A1A;
+  font-size: 1.125rem;
+  line-height: 1.4;
+}
+
+.project-case--jojob .jojob-ia-decisions p {
+  margin: 0;
+  color: #555555;
+  line-height: 1.7;
+}
+
+@media (max-width: 1023px) {
+  .project-case--jojob .jojob-ia-decisions {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+@media (max-width: 767px) {
+  .project-case--jojob .jojob-ia-visual {
+    padding: 12px;
+    border-radius: 20px;
+  }
+}
+/* JOJOB — ACCESSIBILITÀ */
+.project-case--jojob .jojob-accessibility-visual {
+  margin-bottom: 40px;
+}
+
+/* AZIENDE — ROSSO */
+.project-case--jojob .case-overview-card.jojob-accessibility-card--companies {
+  --card-accent: var(--project-secondary-ink);
+  --card-inner-shadow: rgba(206, 95, 77, 0.20);
+}
+
+/* TERRITORI — VERDE */
+.project-case--jojob .case-overview-card.jojob-accessibility-card--territories {
+  --card-accent: var(--project-tertiary-ink);
+  --card-inner-shadow: rgba(92, 161, 106, 0.25);
+}
+
+/* PERSONE — BLU */
+.project-case--jojob .case-overview-card.jojob-accessibility-card--people {
+  --card-accent: var(--project-primary);
+  --card-inner-shadow: rgba(65, 116, 173, 0.20);
+}
+
+/* SPAZIATURA CONTENUTI */
+.project-case--jojob .jojob-accessibility-card p + p {
+  margin-top: 16px;
+}
+
+/* NOTA NEUTRA */
+.project-case--jojob .jojob-accessibility-note {
+  margin-top: 32px;
+  padding: 24px;
+  border: 1px solid rgba(26, 26, 26, 0.12);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.48);
+}
+
+.project-case--jojob .jojob-accessibility-note p {
+  margin: 0;
+  color: #555555;
+  line-height: 1.7;
+}
+
+.project-case--jojob .jojob-accessibility-note strong {
+  color: #1A1A1A;
+}
+
+.project-case--jojob .jojob-accessibility-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 14px;
+}
+
+.project-case--jojob .jojob-accessibility-note {
+  box-shadow: 0 8px 24px rgba(65, 116, 173, 0.5);
+}
+
+@media (max-width: 1023px) {
+  .project-case--jojob .jojob-accessibility-grid {
+    grid-template-columns: 1fr;
+  }
 }/*# sourceMappingURL=style.css.map */
